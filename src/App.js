@@ -16,10 +16,8 @@ componentDidMount() {
     .then(response => response.json())
     .then((users) => this.setState(() => {
       return {monsters: users}
-    },
-      () => {
-        console.log(this.state)
     }))
+    .catch(err => console.log("oepss something went wrong",err))
 }
 
   render () {
